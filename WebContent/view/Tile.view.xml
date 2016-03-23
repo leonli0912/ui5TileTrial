@@ -1,0 +1,94 @@
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m"
+	controllerName="ui5TileTrial.controller.Tile">
+	<Page title="Welcome " enableScrolling="false" navButtonPress="onNavBackPressed"
+		id="welcomePage">
+		<content>
+			<TileContainer xmlns="sap.m" id="tilecontainer_id"
+				width="100%" height="100%" editable="" allowAdd="" tileMove=""
+				tileDelete="" tileAdd="">
+				<tooltip></tooltip>
+				<!-- sap.ui.core.TooltipBase -->
+				<dependents></dependents>
+				<!-- sap.ui.core.Control, since 1.19 -->
+				<tiles>
+					<StandardTile xmlns="sap.m" id="id3" removable="true"
+						title="Register a Change" info="Create a Change" icon="sap-icon://add"
+						activeIcon="" number="" numberUnit="" infoState="None" type="None"
+						iconDensityAware="true" press="oAddPressed">
+						<tooltip></tooltip>
+						<!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents>
+						<!-- sap.ui.core.Control, since 1.19 -->
+					</StandardTile>
+
+					<StandardTile xmlns="sap.m" id="ida" removable="true"
+						title="My registrations" info="Review/submit a Change" icon="sap-icon://request"
+						activeIcon="" number="" numberUnit="" infoState="None" type="None"
+						iconDensityAware="true" press="onPressNominations">
+						<tooltip></tooltip>
+						<!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents>
+						<!-- sap.ui.core.Control, since 1.19 -->
+					</StandardTile>
+					<StandardTile xmlns="sap.m" id="ida2" removable="true"
+						title="My projects" info="Create/Edit/Review the project" icon="sap-icon://work-history"
+						activeIcon="" number="" numberUnit="" infoState="None" type="None"
+						iconDensityAware="true" press="onPressProjects">
+						<tooltip></tooltip>
+						<!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents>
+						<!-- sap.ui.core.Control, since 1.19 -->
+					</StandardTile>
+					<StandardTile xmlns="sap.m" id="id" removable="true"
+						title="Release Delivery Calendar" info="" icon="sap-icon://calendar"
+						activeIcon="" number="" numberUnit="" infoState="None" type="None"
+						iconDensityAware="true" press="onPressCalendar">
+						<tooltip></tooltip>
+						<!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents>
+						<!-- sap.ui.core.Control, since 1.19 -->
+					</StandardTile>
+
+					<StandardTile xmlns="sap.m" id="id4" removable="true"
+						title="About Us" info="" icon="sap-icon://sys-help" activeIcon=""
+						number="" numberUnit="" infoState="None" type="None"
+						iconDensityAware="true" press="onAboutPressed">
+						<tooltip></tooltip>
+						<!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents>
+						<!-- sap.ui.core.Control, since 1.19 -->
+					</StandardTile>
+					<StandardTile xmlns="sap.m" id="id5" removable="true"
+						title="{
+                                    parts:[{path : 'config>/hasReleasemanagerRole'}, {path : 'config>/hasGovernanceRole'}],
+                                    formatter: 'releaseManagement.util.Formatter.getRoleTitle'
+                                    }"
+						info="" icon="sap-icon://manager" activeIcon="" number=""
+						numberUnit="" infoState="None" type="None" iconDensityAware="true"
+						press="onRMPressed"
+						visible="{
+                                    parts:[{path : 'config>/hasReleasemanagerRole'}, {path : 'config>/hasGovernanceRole'}],
+                                    formatter: 'releaseManagement.util.Formatter.getRoleVisibility'
+                                    }">
+					</StandardTile>
+					<StandardTile xmlns="sap.m" removable="true"
+						title="Upload Calendar" info="" icon="sap-icon://calendar"
+						activeIcon=""
+						visible="{= ${config>/hasReleasemanagerRole} === true || ${config>/hasAdminRole} === true }"
+						number="" numberUnit="" infoState="None" type="None"
+						iconDensityAware="true" press="onUploadCalPressed" />
+
+
+				</tiles>
+				<!-- sap.ui.core.Control -->
+			</TileContainer>
+
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>
