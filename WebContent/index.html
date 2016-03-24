@@ -13,15 +13,27 @@
     	data-sap-ui-xx-bindingSyntax="complex" 
     	data-sap-ui-libs="sap.m"
         data-sap-ui-resourceroots='{
-            "ui5TileTrial": "./"
+            "test0324": "./"
         }'>        >
     </script>
         <script>
         sap.ui.getCore().attachInit(function() {
-            sap.ui.xmlview("RootView", "ui5bp.view.App").placeAt('root');
+        	var app = new sap.m.App("myApp", {
+				initialPage: "id_tile"
+			});
+        	var myView = sap.ui.view({ 
+        		id:"id_tile",
+        		type: sap.ui.core.mvc.ViewType.XML,
+                viewName: "test0324.view.Tile",
+              });
+
+        	// add both pages to the app
+			app.addPage(myView);
+			// place the app into the HTML document
+			app.placeAt("content");
         });
     </script>
 </head>
-<body class="sapUiBody" id="root">
+<body class="sapUiBody" id="content">
 </body>
 </html>

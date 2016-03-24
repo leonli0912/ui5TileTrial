@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="ui5tile">
+    <wb-module deploy-name="test0324">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="ui5tile"/>
-        <property name="java-output-path" value="/ui5tile/build/classes"/>
+        <property name="context-root" value="test0324"/>
+        <property name="java-output-path" value="/test0324/build/classes"/>
     </wb-module>
 </project-modules>

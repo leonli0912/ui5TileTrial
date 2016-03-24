@@ -1,5 +1,5 @@
 <core:View xmlns:core="sap.ui.core" xmlns="sap.m"
-	controllerName="ui5TileTrial.controller.Tile">
+	controllerName="test0324.controller.Tile">
 	<Page title="Welcome " enableScrolling="false" navButtonPress="onNavBackPressed"
 		id="welcomePage">
 		<content>
@@ -58,25 +58,7 @@
 						<dependents></dependents>
 						<!-- sap.ui.core.Control, since 1.19 -->
 					</StandardTile>
-					<StandardTile xmlns="sap.m" id="id5" removable="true"
-						title="{
-                                    parts:[{path : 'config>/hasReleasemanagerRole'}, {path : 'config>/hasGovernanceRole'}],
-                                    formatter: 'releaseManagement.util.Formatter.getRoleTitle'
-                                    }"
-						info="" icon="sap-icon://manager" activeIcon="" number=""
-						numberUnit="" infoState="None" type="None" iconDensityAware="true"
-						press="onRMPressed"
-						visible="{
-                                    parts:[{path : 'config>/hasReleasemanagerRole'}, {path : 'config>/hasGovernanceRole'}],
-                                    formatter: 'releaseManagement.util.Formatter.getRoleVisibility'
-                                    }">
-					</StandardTile>
-					<StandardTile xmlns="sap.m" removable="true"
-						title="Upload Calendar" info="" icon="sap-icon://calendar"
-						activeIcon=""
-						visible="{= ${config>/hasReleasemanagerRole} === true || ${config>/hasAdminRole} === true }"
-						number="" numberUnit="" infoState="None" type="None"
-						iconDensityAware="true" press="onUploadCalPressed" />
+	
 
 
 				</tiles>

@@ -1,10 +1,10 @@
-jQuery.sap.require("releaseManagement.util.Service");
-jQuery.sap.require("releaseManagement.util.Controller");
+//jQuery.sap.require("releaseManagement.util.Service");
+//jQuery.sap.require("releaseManagement.util.Controller");
 
-releaseManagement.util.Controller.extend("ui5TileTrial.controller.Tile", {
+sap.ui.controller("test0324.controller.Tile",{
 
 	onInit : function() {
-		this.bus = this.getEventBus();
+//		this.bus = this.getEventBus();
 		var Windowwidth = window.screen.availWidth;
 		//show the navigation button depending on if the current device is a phone or not
 // 		this.getView().byId("welcomePage").setShowNavButton(
