@@ -1,7 +1,7 @@
 //jQuery.sap.require("releaseManagement.util.Service");
 //jQuery.sap.require("releaseManagement.util.Controller");
 
-sap.ui.controller("test0324.controller.Tile",{
+sap.ui.controller("ui5TileTrial.controller.Tile",{
 
 	onInit : function() {
 //		this.bus = this.getEventBus();
