@@ -18,19 +18,9 @@
     </script>
         <script>
         sap.ui.getCore().attachInit(function() {
-        	var app = new sap.m.App("myApp", {
-				initialPage: "id_tile"
-			});
-        	var myView = sap.ui.view({ 
-        		id:"id_tile",
-        		type: sap.ui.core.mvc.ViewType.XML,
-                viewName: "ui5TileTrial.view.Tile",
-              });
-
-        	// add both pages to the app
-			app.addPage(myView);
-			// place the app into the HTML document
-			app.placeAt("content");
+   		 new sap.ui.core.ComponentContainer({
+             name : "ui5TileTrial"
+          }).placeAt("content");
         });
     </script>
 </head>

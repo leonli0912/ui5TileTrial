@@ -1,0 +1,37 @@
+{
+    "sap.ui5": {
+        "_version": "1.1.0", 
+        "rootView": "ui5TileTest.view.tile", 
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router", 
+                "viewType": "XML", 
+                "viewPath": "ui5TileTrial.view", 
+                "controlId":"myApp",
+                "controlAggregation": "pages", 
+                "transition": "slide"
+            }, 
+            "routes": [
+                {
+                    "pattern": "", 
+                    "name": "appHome", 
+                    "target": "home"
+                }, 
+                {
+                    "pattern": "split", 
+                    "name": "split", 
+                    "target": "split"
+                }
+            ], 
+            "targets": {
+                "home": {
+                    "viewName": "Tile", 
+                    "viewLevel": 1
+                }, 
+                "split": {
+                    "viewName": "SplitPage"
+                }
+            }
+        }
+    }
+}

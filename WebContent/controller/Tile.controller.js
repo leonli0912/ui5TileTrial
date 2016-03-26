@@ -10,6 +10,11 @@ sap.ui.controller("ui5TileTrial.controller.Tile",{
 // 		this.getView().byId("welcomePage").setShowNavButton(
 // 				jQuery.device.is.phone);
 	},
+	
+	onShowSplitScreen:function(evt){
+		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		oRouter.navTo("split");
+	},
 
 	onPressCalendar : function(evt) {
 

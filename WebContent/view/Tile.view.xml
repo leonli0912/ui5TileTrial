@@ -14,7 +14,7 @@
 					<StandardTile xmlns="sap.m" id="id3" removable="true"
 						title="Register a Change" info="Create a Change" icon="sap-icon://add"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
-						iconDensityAware="true" press="oAddPressed">
+						iconDensityAware="true" press="onShowSplitScreen">
 						<tooltip></tooltip>
 						<!-- sap.ui.core.TooltipBase -->
 						<dependents></dependents>
