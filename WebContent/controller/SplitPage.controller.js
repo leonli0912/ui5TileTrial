@@ -15,6 +15,12 @@ sap.ui.define([
 				'icon':'desktop.ico'
 			});
 		},
+		
+		//master1 navback
+		onPressHome:function(oEvent){
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("");
+		},
 
 		onOrientationChange: function(oEvent) {
 			var bLandscapeOrientation = oEvent.getParameter("landscape"),
