@@ -1,6 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc"
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-	controllerName="ui5TileTrial.controller.SplitPage" xmlns="sap.m">
+	controllerName="ui5TileTrial.controller.SplitPage" xmlns="sap.m"
+	xmlns:u="sap.ui.unified">
 	<SplitApp id="SplitAppDemo" initialDetail="detail"
 		initialMaster="master" orientationChange="onOrientationChange">
 		<detailPages>

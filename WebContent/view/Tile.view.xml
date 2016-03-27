@@ -1,5 +1,27 @@
-<core:View xmlns:core="sap.ui.core" xmlns="sap.m"
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:u="sap.ui.unified"
 	controllerName="ui5TileTrial.controller.Tile">
+	<u:Shell id="myShell" icon="{/logo}">
+		<u:headItems>
+			<u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2"
+				press="handlePressConfiguration" />
+			<u:ShellHeadItem tooltip="Home" icon="sap-icon://home"
+				visible="false" press="handlePressHome" />
+		</u:headItems>
+		<u:headEndItems>
+			<u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff"
+				press="handleLogoffPress" />
+		</u:headEndItems>
+		<u:user>
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder"
+				username="Karl Mustermann" press="handleUserItemPressed" />
+		</u:user>
+		<u:search>
+			<SearchField search="handleSearchPressed" />
+		</u:search>
+		<u:paneContent>
+			<Text text="Lorem ipsum" />
+		</u:paneContent>
+	</u:Shell>
 	<Page title="Welcome " enableScrolling="false" navButtonPress="onNavBackPressed"
 		id="welcomePage">
 		<content>
@@ -58,7 +80,7 @@
 						<dependents></dependents>
 						<!-- sap.ui.core.Control, since 1.19 -->
 					</StandardTile>
-	
+
 
 
 				</tiles>

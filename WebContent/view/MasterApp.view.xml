@@ -1,5 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc"
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-	xmlns="sap.m">
-	<App id="myApp"></App>
+	 xmlns="sap.m">
+	 <App id="myApp">
+	</App>
 </mvc:View>
