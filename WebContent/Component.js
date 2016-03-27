@@ -11,9 +11,10 @@ sap.ui.define([ 'sap/ui/core/UIComponent' ], function(UIComponent) {
 		init : function() {
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
-			this.createContent();
+			// this.createContent();
 			// create the views based on the url/hash
 			this.getRouter().initialize();
+			this.ModelInit();
 		},
 		createContent : function() {
 			var oViewData = {
@@ -25,6 +26,14 @@ sap.ui.define([ 'sap/ui/core/UIComponent' ], function(UIComponent) {
 				viewData : oViewData
 			})
 
+		},
+		ModelInit:function(){
+			var oModel = new sap.ui.model.json.JSONModel({
+				name : "",
+				login:""
+			});
+
+			sap.ui.getCore().setModel(oModel,"user");
 		}
 	});
 })

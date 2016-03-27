@@ -21,6 +21,11 @@
                     "pattern": "split", 
                     "name": "split", 
                     "target": "split"
+                },
+                {
+                	"pattern":"login",
+                	"name":"login",
+                	"target":"login"
                 }
             ], 
             "targets": {
@@ -30,6 +35,9 @@
                 }, 
                 "split": {
                     "viewName": "SplitPage"
+                },
+                "login":{
+                	"viewName": "Login"
                 }
             }
         }

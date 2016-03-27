@@ -9,13 +9,29 @@ sap.ui.controller("ui5TileTrial.controller.Tile",{
 		//show the navigation button depending on if the current device is a phone or not
 // 		this.getView().byId("welcomePage").setShowNavButton(
 // 				jQuery.device.is.phone);
+		//check if login
+		
+	},
+	
+	onAfterRendering:function(){
+		var loginflag = sap.ui.getCore().getModel("user").oData.login;
+		if(loginflag==false){
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("login");
+		}
 	},
 	
 	onShowSplitScreen:function(evt){
 		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		oRouter.navTo("split");
 	},
-
+	handleLogoffPress:function(evt){
+		var oUser = sap.ui.getCore().getModel("user");
+		oUser.login = false;
+		sap.ui.getCore().setModel(oUser,"user");
+		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		oRouter.navTo("login");
+	},
 	onPressCalendar : function(evt) {
 
 		// Navigate to Calendar view (MasterNames1)
@@ -73,13 +89,10 @@ sap.ui.controller("ui5TileTrial.controller.Tile",{
 
 	onAboutPressed : function() {
 
-		// Navigate to DetailAdd.view
-// 		this.bus.publish("nav", "to", {
-// 			destination : "about"
-// 		});
-	this.getRouter().navTo("about");
-
+		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		oRouter.navTo("login");
 	},
+	
 	onPressProjects: function(evt) {
 
 		// Navigate to List of projects (ProjectList)
@@ -98,11 +111,6 @@ sap.ui.controller("ui5TileTrial.controller.Tile",{
 
 	onRMPressed : function() {
 
-		// Navigate to DetailAdd.view
-// 		this.bus.publish("nav", "to", {
-// 			destination : "release_manager"
-// 		});
-	this.getRouter().navTo("registrationsRM");
 
 	},
 

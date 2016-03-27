@@ -1,0 +1,21 @@
+<mvc:View controllerName="ui5TileTrial.controller.Login"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:core="sap.ui.core" xmlns="sap.m">
+
+			<VBox justifyContent="Center" alignItems="Center">
+				<Panel width="20em" class="sapUiResponsiveMargin">
+					<VBox>
+						<Input id="nameInput" class="sapUiSmallMarginBottom" type="Text"
+							placeholder="Enter Name ..." valueStateText="Name must not be empty. Maximum 10 characters." />
+						<Input id="pwInput" type="Password" placeholder="Enter password ..." />
+						<HBox>
+						<Button text="Login" press="onLogin"></Button>
+						<Button text="Register" press="onLogin"></Button>
+						</HBox>
+						
+					</VBox>
+				</Panel>
+			</VBox>
+
+</mvc:View>
