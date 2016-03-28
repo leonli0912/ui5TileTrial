@@ -4,6 +4,10 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 	"use strict";
 
 	var CController = Controller.extend("ui5TileTrial.controller.Login", {
+		onInit:function(){
+			var oApp = this.getOwnerComponent().getModel("app");
+			
+		},
 		onLogin:function(){
 
 			var oUser = sap.ui.getCore().getModel("user");

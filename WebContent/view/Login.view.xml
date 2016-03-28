@@ -2,7 +2,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:core="sap.ui.core" xmlns="sap.m">
-
+<Page class="myLoginPage" showHeader="false">
 			<VBox justifyContent="Center" alignItems="Center">
 				<Panel width="20em" class="sapUiResponsiveMargin">
 					<VBox>
@@ -17,5 +17,5 @@
 					</VBox>
 				</Panel>
 			</VBox>
-
+</Page>
 </mvc:View>

@@ -2,6 +2,13 @@
     "sap.ui5": {
         "_version": "1.1.0", 
         "rootView": "ui5TileTest.view.tile", 
+        "resources": {
+		  "css": [
+			{
+			  "uri": "css/style.css"
+			}
+		  ]
+		},
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router", 
