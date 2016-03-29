@@ -3,23 +3,22 @@
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
 	<Page class="myLoginPage" showHeader="false">
-		<l:VerticalLayout width="100%">
-			<l:content>
-				<VBox id="id_vbox" justifyContent="Center" alignItems="Center">
+
+				<VBox id="id_vbox" alignItems="Stretch"
+                justifyContent="SpaceAround" class="login_box">
 				<Panel>
 						<VBox>
 							<Input id="nameInput" class="sapUiSmallMarginBottom" type="Text"
 								placeholder="Enter Name ..." valueStateText="Name must not be empty. Maximum 10 characters." />
 							<Input id="pwInput" type="Password" placeholder="Enter password ..." />
-							<HBox>
-								<Button text="Login" press="onLogin"></Button>
-								<Button text="Register" press="onLogin"></Button>
-							</HBox>
+							
+							<Button text="Login" press="onLogin" type="Emphasized" width="100%" class="sapMLabelBold loginButton"></Button>
+							
+
 						</VBox>
 				</Panel>
 				</VBox>
-			</l:content>
-		</l:VerticalLayout>
+
 
 	</Page>
 </mvc:View>

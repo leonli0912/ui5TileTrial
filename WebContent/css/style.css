@@ -7,9 +7,16 @@
   justify-content: center;
 }
 
-.myLoginPage.sapMPage>section {
+/* .myLoginPage.sapMPage>section {
     position: absolute;
   display: flex;
   align-items: center;
   justify-content: center
+} */
+
+.login_box {
+    padding: 10% 37% 2rem 37%;
+}
+.loginButton{
+	padding-top:1em;
 }
