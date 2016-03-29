@@ -1,4 +1,15 @@
 .myLoginPage {
   background-image:url('sun_light-wallpaper.jpg');
   font-weight: bold;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myLoginPage.sapMPage>section {
+    position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
