@@ -33,6 +33,11 @@
                 	"pattern":"login",
                 	"name":"login",
                 	"target":"login"
+                },
+                {
+                	"pattern":"person",
+                	"name":"person",
+                	"target":"person"
                 }
             ], 
             "targets": {
@@ -45,6 +50,9 @@
                 },
                 "login":{
                 	"viewName": "Login"
+                },
+                "person":{
+                	"viewName":"ObjectOviewPage"
                 }
             }
         }

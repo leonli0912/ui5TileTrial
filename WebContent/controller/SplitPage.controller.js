@@ -2,8 +2,9 @@ sap.ui.define([
 		'jquery.sap.global',
 		'sap/m/MessageToast',
 		'sap/ui/core/Fragment',
-		'sap/ui/core/mvc/Controller'
-	], function(jQuery, MessageToast, Fragment, Controller) {
+		'sap/ui/core/mvc/Controller',
+		'sap/ui/model/json/JSONModel'
+	], function(jQuery, MessageToast, Fragment, Controller,JSONModel) {
 	"use strict";
  
 	var CController = Controller.extend("ui5TileTrial.controller.SplitPage", {
@@ -14,6 +15,9 @@ sap.ui.define([
 				'tablet':'tablet-icon.png',
 				'icon':'desktop.ico'
 			});
+			var oMasterList = this.byId("id_masterList");
+			var oModel = new JSONModel(jQuery.sap.getModulePath("ui5TileTrial", "/model/products.json"));
+			this.getView().setModel(oModel);
 		},
 		
 		//master1 navback

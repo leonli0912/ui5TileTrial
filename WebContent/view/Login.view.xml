@@ -2,7 +2,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
-	<Page class="myLoginPage" showHeader="false">
+	<Page class="myLoginPage" showHeader="false" enableScrolling="false">
 
 				<VBox id="id_vbox" alignItems="Stretch"
                 justifyContent="SpaceAround" class="login_box">

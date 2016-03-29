@@ -32,6 +32,12 @@ sap.ui.controller("ui5TileTrial.controller.Tile",{
 		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		oRouter.navTo("login");
 	},
+	onPressPersonal:function(evt){
+		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		oRouter.navTo("person");
+	},
+	
+	
 	onPressCalendar : function(evt) {
 
 		// Navigate to Calendar view (MasterNames1)

@@ -38,9 +38,9 @@
 					</StandardTile>
 
 					<StandardTile xmlns="sap.m" id="ida" removable="true"
-						title="My registrations" info="Review/submit a Change" icon="sap-icon://request"
+						title="Personal Data" info="Review/submit a Change" icon="sap-icon://request"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
-						iconDensityAware="true" press="onPressNominations">
+						iconDensityAware="true" press="onPressPersonal">
 					</StandardTile>
 					<StandardTile xmlns="sap.m" id="ida2" removable="true"
 						title="My projects" info="Create/Edit/Review the project" icon="sap-icon://work-history"
