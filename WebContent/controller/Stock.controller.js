@@ -5,9 +5,15 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 
 	var CController = Controller.extend("ui5TileTrial.controller.Stock", {
 		onInit:function(){
-			var url ='';
-			var oDataModel = sap.ui.model.odata.ODataModel(url);
-			sap.ui.getCore().setModel(oDataModel);
+			
+			var stockModel = new sap.ui.model.json.JSONModel();
+			//stockModel.loadData("https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/test/test.xsjs");
+			stockModel.loadData("model/stock.json");
+			this.getView().setModel(stockModel);
+			var oTable=this.byId("idStockHistory");
+			oTable.setModel(stockModel);
+
+			oTable.placeAt("content");
 		}
 		
 	});

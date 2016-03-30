@@ -38,6 +38,11 @@
                 	"pattern":"person",
                 	"name":"person",
                 	"target":"person"
+                },
+                {
+                	"pattern":"stock",
+                	"name":"stock",
+                	"target":"stock"
                 }
             ], 
             "targets": {
@@ -53,6 +58,9 @@
                 },
                 "person":{
                 	"viewName":"ObjectOviewPage"
+                },
+                "stock":{
+                	"viewName": "Stock"
                 }
             }
         }

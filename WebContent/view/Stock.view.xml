@@ -1,9 +1,8 @@
-<mvc:View controllerName="ui5TileTrial.controller.Stock" xlmns="sap.m">
-	<Table id="idStockHistory" items="{
-	path:'/',
-	sorter:{
-		path:'Date'}
-	}">
+<mvc:View controllerName="ui5TileTrial.controller.Stock" 
+xmlns="sap.m"
+xmlns:mvc="sap.ui.core.mvc">
+
+	<Table id="idStockHistory" items="{'/'}">
 		<columns>
 			<Column width="12em">
 				<Text text="Stock"></Text>
@@ -18,15 +17,12 @@
 		<items>
 			<ColumnListItem>
 				<cells>
-					<objectIdentifier title="{Name}" text="{StockID}"></objectIdentifier>
-					<Text text="{Date}"></Text>
-					<objectNumber
-						number="{
-		parts:[{path:'Price'}],
-		type:'sap.ui.model.type.Currency',
-		formOptions:{showMeasure:false}"></objectNumber>
+					<Text text="{name}"></Text>
+					<Text text="{date}"></Text>
+					<ObjectNumber number="{price}">
+					</ObjectNumber>
 				</cells>
 			</ColumnListItem>
 		</items>
-	</Table>
+	</Table> 
 </mvc:View>

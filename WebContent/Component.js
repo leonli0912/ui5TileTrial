@@ -11,10 +11,12 @@ sap.ui.define([ 'sap/ui/core/UIComponent' ], function(UIComponent) {
 		init : function() {
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
-			// this.createContent();
-			// create the views based on the url/hash
+
 			this.getRouter().initialize();
+			//init login data
 			this.ModelInit();
+			//login first
+			this.getRouter().navTo("login");
 		},
 		createContent : function() {
 			var oViewData = {

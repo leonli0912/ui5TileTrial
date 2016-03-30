@@ -31,7 +31,7 @@
 
 				<tiles>
 					<StandardTile xmlns="sap.m" id="id3" removable="true"
-						title="Register a Change" info="Create a Change" icon="sap-icon://add"
+						title="Master Detail Page" info="Create a Change" icon="sap-icon://add"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
 						iconDensityAware="true" press="onShowSplitScreen">
 
@@ -43,9 +43,9 @@
 						iconDensityAware="true" press="onPressPersonal">
 					</StandardTile>
 					<StandardTile xmlns="sap.m" id="ida2" removable="true"
-						title="My projects" info="Create/Edit/Review the project" icon="sap-icon://work-history"
+						title="My Stock" info="Create/Edit/Review the project" icon="sap-icon://work-history"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
-						iconDensityAware="true" press="onPressProjects">
+						iconDensityAware="true" press="onPressStock">
 
 					</StandardTile>
 					<StandardTile xmlns="sap.m" id="id" removable="true"

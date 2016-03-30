@@ -36,7 +36,10 @@ sap.ui.controller("ui5TileTrial.controller.Tile",{
 		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		oRouter.navTo("person");
 	},
-	
+	onPressStock:function(evt){
+		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		oRouter.navTo("stock");
+	},
 	
 	onPressCalendar : function(evt) {
 
