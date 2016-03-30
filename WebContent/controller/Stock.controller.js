@@ -14,15 +14,40 @@ sap.ui
 											var stockModel = new sap.ui.model.json.JSONModel();
 											// stockModel.loadData("https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/test/test.xsjs");
 											// stockModel.loadData("model/stock.json");
+
+											var returndata;
+											 $
+													.ajax({
+																type : "POST",
+																dataType : 'json',
+																data:returndata,
+																url : "https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/stock.xsjs",
+																crossDomain : true})
+													.done(function(data) {
+														console.log("done");
+													})
+													.fail(
+															function(xhr,
+																	textStatus,
+																	errorThrown) {
+																alert(xhr.responseText);
+																alert(textStatus);
+															});
+															
+
 											/*$
 													.ajax(
 															{
-																type : "POST",
+																url : "https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/stock.xsjs",
+																jsonpCallback : 'processJSON',
 																dataType : 'jsonp',
-																url : "https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/test/test.xsjs",
+																type : 'POST',
+																headers : {
+																	"Access-Control-Allow-Origin" : "*"
+																},
+																crossDomain : true,
 																username : 'i074178',
 																password : 'Initial9',
-																crossDomain : true,
 																xhrFields : {
 																	withCredentials : true
 																}
@@ -37,12 +62,20 @@ sap.ui
 																alert(xhr.responseText);
 																alert(textStatus);
 															});*/
+											function processJSON(json){
+												console.log("processing json");
+												
+											};
 											this.getView().setModel(stockModel);
 											var oTable = this
 													.byId("idStockHistory");
 											oTable.setModel(stockModel);
 
-											oTable.placeAt("content");
+										},
+										onPressBack : function(evt) {
+											var oRouter = sap.ui.core.UIComponent
+													.getRouterFor(this);
+											oRouter.navTo("appHome");
 										}
 
 									});

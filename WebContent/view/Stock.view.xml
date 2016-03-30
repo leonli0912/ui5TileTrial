@@ -1,8 +1,8 @@
-<mvc:View controllerName="ui5TileTrial.controller.Stock" 
+<mvc:View  controllerName="ui5TileTrial.controller.Stock"
 xmlns="sap.m"
 xmlns:mvc="sap.ui.core.mvc">
-
-	<Table id="idStockHistory" items="{'/'}">
+<Page showNavButton="true" navButtonText="Back" navButtonPress="onPressBack">
+	<Table id="idStockHistory" items="{path: '/'}">
 		<columns>
 			<Column width="12em">
 				<Text text="Stock"></Text>
@@ -25,4 +25,5 @@ xmlns:mvc="sap.ui.core.mvc">
 			</ColumnListItem>
 		</items>
 	</Table> 
+	</Page>
 </mvc:View>
