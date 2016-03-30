@@ -11,10 +11,10 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 		onLogin:function(){
 
 			var oUser = sap.ui.getCore().getModel("user");
-			oUser.login = true;
+			oUser.oData.login = true;
 			sap.ui.getCore().setModel(oUser,"user");
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("");
+			oRouter.navTo("appHome");
 		}
 	});
 });
