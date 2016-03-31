@@ -13,7 +13,7 @@ sap.ui
 
 											var stockModel = new sap.ui.model.json.JSONModel();
 											// stockModel.loadData("https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/test/test.xsjs");
-											// stockModel.loadData("model/stock.json");
+											stockModel.loadData("model/stock.json");
 											/*$
 													.ajax(
 															{
@@ -42,7 +42,7 @@ sap.ui
 													.byId("idStockHistory");
 											oTable.setModel(stockModel);
 
-											oTable.placeAt("content");
+											
 										}
 
 									});

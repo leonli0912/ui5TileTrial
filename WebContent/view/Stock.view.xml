@@ -2,7 +2,7 @@
 xmlns="sap.m"
 xmlns:mvc="sap.ui.core.mvc">
 
-	<Table id="idStockHistory" items="{'/'}">
+	<Table id="idStockHistory" items="{path:'/'}">
 		<columns>
 			<Column width="12em">
 				<Text text="Stock"></Text>
