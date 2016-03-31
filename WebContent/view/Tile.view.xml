@@ -15,9 +15,9 @@
 			<u:ShellHeadUserItem image="sap-icon://person-placeholder"
 				username="Karl Mustermann" press="handleUserItemPressed" />
 		</u:user>
-		<u:search>
+<!-- 		<u:search>
 			<SearchField search="handleSearchPressed" />
-		</u:search>
+		</u:search> -->
 		<u:paneContent>
 			<Text text="Lorem ipsum" />
 		</u:paneContent>

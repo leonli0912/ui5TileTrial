@@ -39,10 +39,14 @@ sap.ui
 															});*/
 											this.getView().setModel(stockModel);
 											var oTable = this
-													.byId("idStockHistory");
+													.byId("id_stockList");
 											oTable.setModel(stockModel);
 
 											
+										},
+										onPressHome:function(){
+											var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+											oRouter.navTo("appHome");
 										}
 
 									});

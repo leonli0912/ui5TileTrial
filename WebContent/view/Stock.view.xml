@@ -1,28 +1,26 @@
-<mvc:View controllerName="ui5TileTrial.controller.Stock" 
-xmlns="sap.m"
-xmlns:mvc="sap.ui.core.mvc">
-
-	<Table id="idStockHistory" items="{path:'/'}">
-		<columns>
-			<Column width="12em">
-				<Text text="Stock"></Text>
-			</Column>
-			<Column width="12em">
-				<Text text="Date"></Text>
-			</Column>
-			<Column width="12em">
-				<Text text="Pirce"></Text>
-			</Column>
-		</columns>
-		<items>
-			<ColumnListItem>
-				<cells>
-					<Text text="{name}"></Text>
-					<Text text="{date}"></Text>
-					<ObjectNumber number="{price}">
-					</ObjectNumber>
-				</cells>
-			</ColumnListItem>
-		</items>
-	</Table> 
+<mvc:View controllerName="ui5TileTrial.controller.Stock" xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<SplitApp id="SplitStock" initialDetail="stockDetail"
+		initialMaster="stockMaster" orientationChange="onOrientationChange">
+		<masterPages>
+			<Page id="stockMaster" title="Stocks" icon="sap-icon://action"
+				showNavButton="true" navButtonPress="onPressHome" class="sapUiStdPage">
+				<content>
+					<List id="id_stockList" items="{/}">
+						<StandardListItem title="{name}" description="{date}"
+							type="Navigation" icon="{ProductPicUrl}" iconDensityAware="false"
+							iconInset="false" press="onPressGoToMaster" />
+					</List>
+				</content>
+			</Page>
+		</masterPages>
+		<detailPages>
+			<Page id="stockDetail" title="Stock Detail" class="sapUiStdPage">
+				<content>
+					<Label text="Detail page 1" />
+					<Button text="Go to Detail page2" press="onPressNavToDetail" />
+				</content>
+			</Page>
+		</detailPages>
+	</SplitApp>
 </mvc:View>
