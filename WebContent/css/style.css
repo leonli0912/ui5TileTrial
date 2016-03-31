@@ -6,6 +6,9 @@
   align-items: center;
   justify-content: center;
 }
+@media only screen {
+    .myLoginPage {background-image: url("sun_light-wallpaper_mobile.jpg"); }
+}
 
 /* .myLoginPage.sapMPage>section {
     position: absolute;
