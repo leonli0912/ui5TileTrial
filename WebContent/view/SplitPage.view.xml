@@ -55,13 +55,10 @@
 			<Page id="master" title="Master 1" icon="sap-icon://action"
 				showNavButton="true" navButtonPress="onPressHome" class="sapUiStdPage">
 				<content>
-					<List id="id_masterList" items="{/ProductCollection}">
-						<StandardListItem title="{Name}" description="{ProductId}"
-							type="Navigation" icon="{ProductPicUrl}" iconDensityAware="false"
-							iconInset="false" press="onPressGoToMaster" />
-							
-						<!-- <items> <StandardListItem title="To Master2" type="Navigation" 
-							press="onPressGoToMaster" /> </items> -->
+					<List id="id_masterList" items="{/}">
+						<StandardListItem title="{name}" description="{email}"
+							type="Navigation" icon="{picture}" iconDensityAware="false"
+							iconInset="true" press="onPressGoToMaster" />
 							
 					</List>
 				</content>

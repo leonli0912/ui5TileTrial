@@ -16,7 +16,7 @@ sap.ui.define([
 				'icon':'desktop.ico'
 			});
 			var oMasterList = this.byId("id_masterList");
-			var oModel = new JSONModel(jQuery.sap.getModulePath("ui5TileTrial", "/model/products.json"));
+			var oModel = new JSONModel(jQuery.sap.getModulePath("ui5TileTrial", "/model/people.json"));
 			this.getView().setModel(oModel);
 		},
 		
