@@ -15,6 +15,7 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 			sap.ui.getCore().setModel(oUser,"user");
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("appHome");
+		
 		}
 	});
 });
