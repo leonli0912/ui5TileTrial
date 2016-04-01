@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
 }
-@media only screen {
+@media only screen and (max-width: 800px) {
     .myLoginPage {background-image: url("sun_light-wallpaper_mobile.jpg"); }
 }
 
