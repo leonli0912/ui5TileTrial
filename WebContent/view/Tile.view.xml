@@ -31,14 +31,14 @@
 
 				<tiles>
 					<StandardTile xmlns="sap.m" id="id3" removable="true"
-						title="Master Detail Page" info="Create a Change" icon="sap-icon://add"
+						title="Register User(Admin)" info="Create a Change" icon="sap-icon://add"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
 						iconDensityAware="true" press="onShowSplitScreen">
 
 					</StandardTile>
 
 					<StandardTile xmlns="sap.m" id="ida" removable="true"
-						title="Personal Data" info="Review/submit a Change" icon="sap-icon://request"
+						title="Employee Data" info="Review/submit a Change" icon="sap-icon://request"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
 						iconDensityAware="true" press="onPressPersonal">
 					</StandardTile>

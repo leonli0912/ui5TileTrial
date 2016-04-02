@@ -1,0 +1,27 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:forms="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" xmlns="sap.m">
+
+	<forms:SimpleForm id="SimpleFormDisplay480_12120"
+		minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+		title="Address" labelSpanL="3" labelSpanM="3" emptySpanL="4"
+		emptySpanM="4" columnsL="1" columnsM="1">
+		<forms:content>
+			<core:Title text="Office" />
+			<Label text="Name" />
+			<Text text="upplierName" />
+			<Label text="Street/No." />
+			<Text text="{Street} {HouseNumber}" />
+			<Label text="ZIP Code/City" />
+			<Text text="{ZIPCode} {City}" />
+			<Label text="Country" />
+			<Text text="{Country}" />
+			<core:Title text="Online" />
+			<Label text="Web" />
+			<Text text="{Url}" />
+			<Label text="Twitter" />
+			<Text text="{Twitter}" />
+		</forms:content>
+
+	</forms:SimpleForm>
+
+</mvc:View>

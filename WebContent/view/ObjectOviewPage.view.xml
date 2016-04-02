@@ -1,12 +1,11 @@
 <core:View xmlns:core="sap.ui.core" xmlns="sap.uxap"
-	xmlns:layout="sap.ui.layout" xmlns:m="sap.m"
-
-	xmlns:cblock="ui5TileTrial.controller.controllerblocks" 
-	controllerName="ui5TileTrial.controller.ObjectOviewPage"
-	 height="100%">
+	xmlns:layout="sap.ui.layout" xmlns:m="sap.m" xmlns:forms="sap.ui.layout.form"
+	xmlns:cblock="ui5TileTrial.controller.controllerblocks" controllerName="ui5TileTrial.controller.ObjectOviewPage"
+	height="100%">
 	<ObjectPageLayout id="ObjectPageLayout"
 		enableLazyLoading="false" showTitleInHeaderContent="true"
-		showEditHeaderButton="true" editHeaderButtonPress="handleEditBtnPress">
+		showEditHeaderButton="true" editHeaderButtonPress="handleEditBtnPress"
+		useTwoColumnsForLargeScreen="true">
 		<headerTitle>
 			<ObjectPageHeader objectImageURI="./img/people/beautifulgirl.png"
 				objectTitle="Denise Smith" objectImageShape="Circle" objectImageAlt="Denise Smith"
@@ -50,43 +49,56 @@
 		</headerContent>
 
 		<sections>
-			<ObjectPageSection title="2014 Goals Plan">
+			<ObjectPageSection title="Personal" importance="Medium">
 				<subSections>
-					<ObjectPageSubSection title=" ">
-						<blocks>
-							<cblock:GoalsBlock id="goalsblock" />
-						</blocks>
+					<ObjectPageSubSection title="">
+						<cblock:PersonalBlock id="personalblock"
+							columnLayout="3" />
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection title="Empolyment" importance="Medium">
+				<subSections>
+					<ObjectPageSubSection title="">
+						<cblock:JobBlock id="jobblock" columnLayout="2" />
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection>
 
-			<!-- <ObjectPageSection title="Personal" importance="Medium"> <subSections> 
-				<ObjectPageSubSection title="Connect"> <blocks> <personal:BlockPhoneNumber 
-				id="phone" /> <personal:BlockSocial id="social" /> <personal:BlockAdresses 
-				id="adresses" /> <personal:BlockMailing id="mailing" columnLayout="1" /> 
-				</blocks> </ObjectPageSubSection> <ObjectPageSubSection title="Payment information"> 
-				<blocks> <personal:PersonalBlockPart1 id="part1" columnLayout="1" /> </blocks> 
-				<moreBlocks> <personal:PersonalBlockPart2 id="part2" columnLayout="1" /> 
-				</moreBlocks> </ObjectPageSubSection> </subSections> </ObjectPageSection> 
-				<ObjectPageSection title="Employment"> <subSections> <ObjectPageSubSection 
-				title="Job information"> <blocks> <employment:BlockJobInfoPart1 id="jobinfopart1" 
-				/> <employment:BlockJobInfoPart2 id="jobinfopart2" /> <employment:BlockJobInfoPart3 
-				id="jobinfopart3" /> </blocks> </ObjectPageSubSection> <ObjectPageSubSection 
-				title="Employee Details" mode="Collapsed" importance="Medium"> <blocks> <employment:BlockEmpDetailPart1 
-				id="empdetailpart1" columnLayout="1" /> </blocks> <moreBlocks> <employment:BlockEmpDetailPart2 
-				id="empdetailpart2" columnLayout="1" /> <employment:BlockEmpDetailPart3 id="empdetailpart3" 
-				columnLayout="1" /> </moreBlocks> </ObjectPageSubSection> <ObjectPageSubSection 
-				title="Job Relationship" mode="Collapsed" importance="Low"> <blocks> <employment:EmploymentBlockJob 
-				id="employmentblockjob" showSubSectionMore="true"> <employment:mappings> 
-				<ModelMapping externalModelName="ObjectPageModel" internalModelName="emp1" 
-				externalPath="/Employee/0" /> <ModelMapping externalModelName="ObjectPageModel" 
-				internalModelName="emp2" externalPath="/Employee/1" /> <ModelMapping externalModelName="ObjectPageModel" 
-				internalModelName="emp3" externalPath="/Employee/2" /> <ModelMapping externalModelName="ObjectPageModel" 
-				internalModelName="emp4" externalPath="/Employee/3" /> <ModelMapping externalModelName="ObjectPageModel" 
-				internalModelName="emp5" externalPath="/Employee/4" /> <ModelMapping externalModelName="ObjectPageModel" 
-				internalModelName="emp6" externalPath="/Employee/5" /> </employment:mappings> 
-				</employment:EmploymentBlockJob> </blocks> </ObjectPageSubSection> </subSections> 
-				</ObjectPageSection> -->
+			<ObjectPageSection title="Payroll Result"
+				importance="Medium">
+				<subSections>
+					<ObjectPageSubSection title="">
+					<cblock:PayrollBlock id="payrollblock" columnLayout="2" />
+						<!-- <layout:BlockLayout id="BlockLayout"
+							background="{/selectedBackground}">
+							<layout:BlockLayoutRow>
+								<layout:BlockLayoutCell title="75% width cell"
+									width="2">
+									<forms:SimpleForm editable="true">
+										<m:Label text="Name on card" required="true" />
+										<m:Input value="{/CreditCard/Name}" liveChange="checkCreditCardStep"
+											valueLiveUpdate="true" />
+										<m:Label text="Card number" />
+										<m:Input value="{/CardNumber}" />
+										<m:Label text="Security code" />
+										<m:Input value="{/CreditCard/SecurityCode}" />
+										<m:Label text="Expiration date" />
+										<m:DatePicker value="{/CreditCard/Expire}" />
+									</forms:SimpleForm>
+
+								</layout:BlockLayoutCell>
+								<layout:BlockLayoutCell width="2">
+									<m:Text
+										text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr." />
+
+								</layout:BlockLayoutCell>
+							</layout:BlockLayoutRow>
+						</layout:BlockLayout> -->
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
 		</sections>
 	</ObjectPageLayout>
 </core:View>

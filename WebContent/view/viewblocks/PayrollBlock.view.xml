@@ -1,0 +1,57 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:forms="sap.ui.layout.form"
+	xmlns:m="sap.m" xmlns:layout="sap.ui.layout">
+
+	<layout:BlockLayout id="BlockLayout" background="{/selectedBackground}">
+		<layout:BlockLayoutRow>
+			<layout:BlockLayoutCell title="75% width cell"
+				width="2">
+				<forms:SimpleForm maxContainerCols="1"
+					layout="ResponsiveGridLayout" width="100%">
+					<layout:VerticalLayout>
+						<m:Label text="Evangelize the UI framework accross the company"
+							design="Bold" />
+						<m:Text text="4 days overdue Cascaded" />
+						<m:Text text=" " />
+						<m:Label text="Get trained in development management direction"
+							design="Bold" />
+
+					</layout:VerticalLayout>
+				</forms:SimpleForm>
+
+			</layout:BlockLayoutCell>
+			<layout:BlockLayoutCell width="2">
+				<forms:SimpleForm>
+
+					<m:Label text="Name on card" required="true" />
+					<m:Input value="{/CreditCard/Name}" liveChange="checkCreditCardStep"
+						valueLiveUpdate="true" />
+					<m:Label text="Card number" />
+					<m:Input value="{/CardNumber}" />
+					<m:Label text="Security code" />
+					<m:Input value="{/CreditCard/SecurityCode}" />
+					<m:Label text="Expiration date" />
+					<m:DatePicker value="{/CreditCard/Expire}" />
+
+				</forms:SimpleForm>
+
+			</layout:BlockLayoutCell>
+			<layout:BlockLayoutCell title="75% width cell"
+				width="2">
+				<forms:SimpleForm maxContainerCols="1"
+					layout="ResponsiveGridLayout" width="100%">
+					<layout:VerticalLayout>
+						<m:Label text="Evangelize the UI framework accross the company"
+							design="Bold" />
+						<m:Text text="4 days overdue Cascaded" />
+						<m:Text text=" " />
+						<m:Label text="Get trained in development management direction"
+							design="Bold" />
+
+					</layout:VerticalLayout>
+				</forms:SimpleForm>
+
+			</layout:BlockLayoutCell>
+		</layout:BlockLayoutRow>
+	</layout:BlockLayout>
+
+</mvc:View>
