@@ -36,3 +36,7 @@
 .loginButton{
 	padding-top:1em;
 }
+
+.sapMInputBase.zCompanyComboBox{
+	display: inherit;
+}

@@ -14,29 +14,28 @@ sap.ui
 											var stockModel = new sap.ui.model.json.JSONModel();
 											// stockModel.loadData("https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/test/test.xsjs");
 											stockModel.loadData("model/stock.json");
-											/*$
+											$
 													.ajax(
 															{
 																type : "POST",
 																dataType : 'jsonp',
-																url : "https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/test/test.xsjs",
-																username : 'i074178',
-																password : 'Initial9',
-																crossDomain : true,
-																xhrFields : {
-																	withCredentials : true
-																}
-															})
-													.done(function(data) {
-														console.log("done");
-													})
-													.fail(
-															function(xhr,
-																	textStatus,
-																	errorThrown) {
-																alert(xhr.responseText);
-																alert(textStatus);
-															});*/
+																url : "http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp?symbol=AAPL&callback=?",
+															    jsonpCallback: 'processJson',
+															    contentType: "application/json",
+															    dataType: 'jsonp',
+															    success: function(json) {
+															       console.log("success...");
+															    },
+															    error: function(e) {
+															       console.log(e.message);
+															    }
+															});
+											window.processJson = function(data){
+												
+											console.log("processing data...");
+											};
+													
+											
 											this.getView().setModel(stockModel);
 											var oTable = this
 													.byId("id_stockList");
