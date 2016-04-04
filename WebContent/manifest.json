@@ -1,7 +1,7 @@
 {
     "sap.ui5": {
         "_version": "1.1.0", 
-        "rootView": "ui5TileTest.view.tile", 
+        "rootView": "ui5TileTest.view.tile11", 
         "resources": {
 		  "css": [
 			{
@@ -20,7 +20,7 @@
             }, 
             "routes": [
                 {
-                    "pattern": "", 
+                    "pattern": "homepage", 
                     "name": "appHome", 
                     "target": "home"
                 }, 
@@ -30,7 +30,7 @@
                     "target": "split"
                 },
                 {
-                	"pattern":"login",
+                	"pattern":"",
                 	"name":"login",
                 	"target":"login"
                 },

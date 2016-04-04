@@ -9,8 +9,11 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 			
 		},
 		onLogin:function(){
-
+			var oName = this.getView().byId("nameInput").getValue();
 			var oUser = sap.ui.getCore().getModel("user");
+			if(oName=="admin"){
+				oUser.oData.role ="Super";
+			}
 			oUser.oData.login = true;
 			sap.ui.getCore().setModel(oUser,"user");
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);

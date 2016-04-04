@@ -3,22 +3,6 @@
 
 	<layout:BlockLayout id="BlockLayout" background="{/selectedBackground}">
 		<layout:BlockLayoutRow>
-			<layout:BlockLayoutCell title="75% width cell"
-				width="2">
-				<forms:SimpleForm maxContainerCols="1"
-					layout="ResponsiveGridLayout" width="100%">
-					<layout:VerticalLayout>
-						<m:Label text="Evangelize the UI framework accross the company"
-							design="Bold" />
-						<m:Text text="4 days overdue Cascaded" />
-						<m:Text text=" " />
-						<m:Label text="Get trained in development management direction"
-							design="Bold" />
-
-					</layout:VerticalLayout>
-				</forms:SimpleForm>
-
-			</layout:BlockLayoutCell>
 			<layout:BlockLayoutCell width="2">
 				<forms:SimpleForm>
 

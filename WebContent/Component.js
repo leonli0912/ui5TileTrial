@@ -32,7 +32,8 @@ sap.ui.define([ 'sap/ui/core/UIComponent' ], function(UIComponent) {
 		ModelInit:function(){
 			var oModel = new sap.ui.model.json.JSONModel({
 				name : "",
-				login:""
+				login:"",
+				role:""
 			});
 
 			sap.ui.getCore().setModel(oModel,"user");

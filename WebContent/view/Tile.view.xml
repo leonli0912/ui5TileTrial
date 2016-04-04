@@ -23,44 +23,32 @@
 		</u:paneContent>
 	</u:Shell>
 	<Page title="Welcome " enableScrolling="false" navButtonPress="onNavBackPressed"
-		id="welcomePage">
+		id="id_HomePage">
 		<content>
 			<TileContainer xmlns="sap.m" id="tilecontainer_id"
 				width="100%" height="100%" editable="" allowAdd="" tileMove=""
 				tileDelete="" tileAdd="">
 
 				<tiles>
-					<StandardTile xmlns="sap.m" id="id3" removable="true"
+	<!-- 				<StandardTile xmlns="sap.m" id="id3" removable="true"
 						title="Register User(Admin)" info="Create a Change" icon="sap-icon://add"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
 						iconDensityAware="true" press="onShowSplitScreen">
 
-					</StandardTile>
-
-					<StandardTile xmlns="sap.m" id="ida" removable="true"
-						title="Employee Data" info="Review/submit a Change" icon="sap-icon://request"
-						activeIcon="" number="" numberUnit="" infoState="None" type="None"
-						iconDensityAware="true" press="onPressPersonal">
 					</StandardTile>
 					<StandardTile xmlns="sap.m" id="ida2" removable="true"
 						title="My Stock" info="Create/Edit/Review the project" icon="sap-icon://work-history"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
 						iconDensityAware="true" press="onPressStock">
 
-					</StandardTile>
-					<StandardTile xmlns="sap.m" id="id" removable="true"
-						title="Release Delivery Calendar" info="" icon="sap-icon://calendar"
+					</StandardTile> -->
+					<StandardTile xmlns="sap.m" id="ida" removable="true"
+						title="Employee Data" info="Review/submit a Change" icon="sap-icon://request"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
-						iconDensityAware="true" press="onPressCalendar">
-
+						iconDensityAware="true" press="onPressPersonal">
 					</StandardTile>
 
-					<StandardTile xmlns="sap.m" id="id4" removable="true"
-						title="About Us" info="" icon="sap-icon://sys-help" activeIcon=""
-						number="" numberUnit="" infoState="None" type="None"
-						iconDensityAware="true" press="onAboutPressed">
 
-					</StandardTile>
 
 
 
