@@ -1,20 +1,37 @@
 {
+    "sap.app": {
+        "ach": "CA-UI5-DOC", 
+        "dataSources": {
+            "stockRemote": {
+                "uri": "http://120.27.144.171:8080/Odata/Cloud_Hr.svc/", 
+                "type": "OData", 
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    }, 
     "sap.ui5": {
         "_version": "1.1.0", 
         "rootView": "ui5TileTest.view.tile11", 
         "resources": {
-		  "css": [
-			{
-			  "uri": "css/style.css"
-			}
-		  ]
-		},
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        }, 
+        "models":{
+        	"stock":{
+        		"dataSource":"stockRemote"
+        	}
+        },
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router", 
                 "viewType": "XML", 
                 "viewPath": "ui5TileTrial.view", 
-                "controlId":"myApp",
+                "controlId": "myApp", 
                 "controlAggregation": "pages", 
                 "transition": "slide"
             }, 
@@ -28,21 +45,21 @@
                     "pattern": "split", 
                     "name": "split", 
                     "target": "split"
-                },
+                }, 
                 {
-                	"pattern":"",
-                	"name":"login",
-                	"target":"login"
-                },
+                    "pattern": "", 
+                    "name": "login", 
+                    "target": "login"
+                }, 
                 {
-                	"pattern":"person",
-                	"name":"person",
-                	"target":"person"
-                },
+                    "pattern": "person", 
+                    "name": "person", 
+                    "target": "person"
+                }, 
                 {
-                	"pattern":"stock",
-                	"name":"stock",
-                	"target":"stock"
+                    "pattern": "stock", 
+                    "name": "stock", 
+                    "target": "stock"
                 }
             ], 
             "targets": {
@@ -52,15 +69,15 @@
                 }, 
                 "split": {
                     "viewName": "SplitPage"
-                },
-                "login":{
-                	"viewName": "Login"
-                },
-                "person":{
-                	"viewName":"ObjectOviewPage"
-                },
-                "stock":{
-                	"viewName": "Stock"
+                }, 
+                "login": {
+                    "viewName": "Login"
+                }, 
+                "person": {
+                    "viewName": "ObjectOviewPage"
+                }, 
+                "stock": {
+                    "viewName": "Stock"
                 }
             }
         }

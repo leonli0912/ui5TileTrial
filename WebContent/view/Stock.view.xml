@@ -7,7 +7,7 @@
 				showNavButton="true" navButtonPress="onPressHome" class="sapUiStdPage">
 				<content>
 					<List id="id_stockList" items="{/}">
-						<StandardListItem title="{name}" description="{date}"
+						<StandardListItem title="{Customer_id}" description="{Customer_name}"
 							type="Navigation" icon="{ProductPicUrl}" iconDensityAware="false"
 							iconInset="false" press="onPressGoToMaster" />
 					</List>
