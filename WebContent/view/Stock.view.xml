@@ -5,6 +5,10 @@
 		<masterPages>
 			<Page id="stockMaster" title="Stocks" icon="sap-icon://action"
 				showNavButton="true" navButtonPress="onPressHome" class="sapUiStdPage">
+				<headerContent>
+				<Button icon="sap-icon://add" press="onPressAdd">
+				</Button>
+				</headerContent>
 				<content>
 					<List id="id_stockList" items="{/}">
 						<StandardListItem title="{Customer_id}" description="{Customer_name}"
