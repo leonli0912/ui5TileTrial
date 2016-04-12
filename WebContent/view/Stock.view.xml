@@ -16,6 +16,7 @@
 							iconInset="false" press="onPressGoToMaster" />
 					</List>
 				</content>
+
 			</Page>
 		</masterPages>
 		<detailPages>
