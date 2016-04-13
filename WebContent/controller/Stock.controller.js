@@ -50,6 +50,9 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 		},
 		onPressAdd : function(oEvt) {
 			var that = this;
+			var endDate = new Date();
+			var startDate = new Date();
+			endDate.setFullYear(2017,12,31);
 			var entitySet = "Customers";
 			var headers = {
 				'Content-Type' : 'application/json',
@@ -72,23 +75,23 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 			var newCont_info = {
 
 				"Employee_id" : "w0001",
-				"End_date" : "20171231",
+				"End_date" : endDate,
 				"Attachment" : "",
 				"Country" : "CN",
 				"Document_number" : "",
 				"Document_title" : "",
 				"Document_type" : "",
-				"Expire_date" : "20171231",
+				"Expire_date" : endDate,
 				"Publish_authority" : "",
 				"Publish_date" : "",
 				"Publish_place" : "",
-				"Start_date" : "20160101"
+				"Start_date" : startDate
 
 			};
 			var newEmployee_info = {
 				"Employee_id" : "w0001",
-				"End_date" : "20171231",
-				"Begin_date" : "20160101",
+				"End_date" : endDate,
+				"Begin_date" : startDate,
 				"Birth_country" : "CN",
 				"Birth_place" : "Shanghai",
 				"Birthday" : "19880912",
@@ -96,12 +99,12 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 				"Ethnic" : "",
 				"First_name" : "Tang",
 				"Gender" : "Female",
-				"Hire_date" : "20160101",
+				"Hire_date" : startDate,
 				"Id_number" : "w0001",
 				"Id_type" : "11",
 				"Language" : "cn",
 				"Last_name" : "Tom",
-				"Marital_begin" : "20160101",
+				"Marital_begin" : startDate,
 				"Marital_status" : "active",
 				"Nationality" : "cn",
 				"Phone" : "13795487532",
@@ -109,7 +112,7 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 			};
 			var newEmployment_info = {
 				"Employee_id" : "w0001",
-				"End_date" : "20171231",
+				"End_date" : endDate,
 				"Company" : "wills",
 				"Employee_group" : "",
 				"Grade" : "2",
@@ -117,7 +120,7 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 				"Line_manager" : "Manager",
 				"Position" : "Developer",
 				"Position_category" : "Dev",
-				"Start_date" : "20160101"
+				"Start_date" : startDate
 			};
 			// add customers
 /*			var request = {

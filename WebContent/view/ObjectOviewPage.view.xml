@@ -49,15 +49,20 @@
 		</headerContent>
 
 		<sections>
-			<ObjectPageSection title="Personal" importance="Medium">
+			<ObjectPageSection title="Contact Info" importance="Medium">
 				<subSections>
 					<ObjectPageSubSection title="">
-						<cblock:PersonalBlock id="personalblock"
-							columnLayout="3" />
+						<cblock:PersonalBlock id="personalblock" columnLayout="3">
+							<cblock:mappings>
+							<ModelMapping externalModelName="Cont_info" internalModelName="info1"
+												  externalPath="/results/0" />
+							</cblock:mappings>
+							</cblock:PersonalBlock>
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection>
-			<ObjectPageSection title="Empolyment" importance="Medium">
+			
+			<ObjectPageSection title="Empolyee Info" importance="Medium">
 				<subSections>
 					<ObjectPageSubSection title="">
 						<cblock:JobBlock id="jobblock" columnLayout="2" />
@@ -65,8 +70,7 @@
 				</subSections>
 			</ObjectPageSection>
 
-			<ObjectPageSection title="Payroll Result"
-				importance="Medium">
+			<ObjectPageSection title="Employment Info" importance="Medium">
 				<subSections>
 					<ObjectPageSubSection title="">
 					<cblock:PayrollBlock id="payrollblock" columnLayout="2" />

@@ -7,19 +7,20 @@
 		emptySpanM="4" columnsL="1" columnsM="1">
 		<forms:content>
 			<core:Title text="Office" />
-			<Label text="Name" />
-			<Text text="upplierName" />
-			<Label text="Street/No." />
-			<Text text="{Street} {HouseNumber}" />
+			<Label text="Employee Id"></Label>
+			<Text text="{info1>Employee_id}" />
+			<Label text="Start Date" />
+			<Text text="{info1>Start_date}" />
+			<Label text="End Date" />
+			<Text text="{info1>End_date}" />
+			<Label text="Country" />
+			<Text text="{Cont_info>Country}" />
 			<Label text="ZIP Code/City" />
 			<Text text="{ZIPCode} {City}" />
-			<Label text="Country" />
-			<Text text="{Country}" />
 			<core:Title text="Online" />
 			<Label text="Web" />
 			<Text text="{Url}" />
-			<Label text="Twitter" />
-			<Text text="{Twitter}" />
+
 		</forms:content>
 
 	</forms:SimpleForm>

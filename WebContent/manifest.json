@@ -1,15 +1,6 @@
 {
     "sap.app": {
-        "ach": "CA-UI5-DOC", 
-        "dataSources": {
-            "stockRemote": {
-                "uri": "http://120.27.144.171:8080/Odata/Cloud_Hr.svc/", 
-                "type": "OData", 
-                "settings": {
-                    "odataVersion": "2.0"
-                }
-            }
-        }
+        "ach": "CA-UI5-DOC"
     }, 
     "sap.ui5": {
         "_version": "1.1.0", 
@@ -21,11 +12,6 @@
                 }
             ]
         }, 
-        "models":{
-        	"stock":{
-        		"dataSource":"stockRemote"
-        	}
-        },
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router", 
