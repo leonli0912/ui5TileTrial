@@ -14,7 +14,7 @@
 			<Label text="End Date" />
 			<Text text="{info1>End_date}" />
 			<Label text="Country" />
-			<Text text="{Cont_info>Country}" />
+			<Text text="{info1>Country}" />
 			<Label text="ZIP Code/City" />
 			<Text text="{ZIPCode} {City}" />
 			<core:Title text="Online" />
