@@ -52,17 +52,19 @@
 			<ObjectPageSection title="Contact Info" importance="Medium">
 				<subSections>
 					<ObjectPageSubSection title="">
-						<cblock:PersonalBlock id="personalblock" columnLayout="3">
+						<cblock:PersonalBlock id="personalblock"
+							columnLayout="3">
 							<cblock:mappings>
-							<ModelMapping externalModelName="Cont_Infos" internalModelName="info1"
-												  externalPath="/results/0" />
+								<ModelMapping externalModelName="Cont_Infos"
+									internalModelName="info1" externalPath="/results/0" />
 							</cblock:mappings>
-							</cblock:PersonalBlock>
+						</cblock:PersonalBlock>
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection>
-			
-			<ObjectPageSection title="Empolyee Info" importance="Medium">
+
+			<ObjectPageSection title="Empolyee Info"
+				importance="Medium">
 				<subSections>
 					<ObjectPageSubSection title="">
 						<cblock:JobBlock id="jobblock" columnLayout="2" />
@@ -70,35 +72,17 @@
 				</subSections>
 			</ObjectPageSection>
 
-			<ObjectPageSection title="Employment Info" importance="Medium">
+			<ObjectPageSection title="Employment Info"
+				importance="Medium">
 				<subSections>
 					<ObjectPageSubSection title="">
-					<cblock:PayrollBlock id="payrollblock" columnLayout="2" />
-						<!-- <layout:BlockLayout id="BlockLayout"
-							background="{/selectedBackground}">
-							<layout:BlockLayoutRow>
-								<layout:BlockLayoutCell title="75% width cell"
-									width="2">
-									<forms:SimpleForm editable="true">
-										<m:Label text="Name on card" required="true" />
-										<m:Input value="{/CreditCard/Name}" liveChange="checkCreditCardStep"
-											valueLiveUpdate="true" />
-										<m:Label text="Card number" />
-										<m:Input value="{/CardNumber}" />
-										<m:Label text="Security code" />
-										<m:Input value="{/CreditCard/SecurityCode}" />
-										<m:Label text="Expiration date" />
-										<m:DatePicker value="{/CreditCard/Expire}" />
-									</forms:SimpleForm>
-
-								</layout:BlockLayoutCell>
-								<layout:BlockLayoutCell width="2">
-									<m:Text
-										text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr." />
-
-								</layout:BlockLayoutCell>
-							</layout:BlockLayoutRow>
-						</layout:BlockLayout> -->
+						<cblock:PayrollBlock id="payrollblock"
+							columnLayout="2">
+							<cblock:mappings>
+								<ModelMapping externalModelName="Employment_Infos"
+									internalModelName="info1" externalPath="/results/0" />
+							</cblock:mappings>
+						</cblock:PayrollBlock>
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection>

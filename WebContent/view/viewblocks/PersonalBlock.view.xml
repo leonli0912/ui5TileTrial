@@ -3,7 +3,7 @@
 
 	<forms:SimpleForm id="SimpleFormDisplay480_12120"
 		minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
-		title="Address" labelSpanL="3" labelSpanM="3" emptySpanL="4"
+		 labelSpanL="3" labelSpanM="3" emptySpanL="4"
 		emptySpanM="4" columnsL="1" columnsM="1">
 		<forms:content>
 			<core:Title text="Office" />
