@@ -8,7 +8,7 @@
 		<forms:content>
 			<core:Title text="Office" />
 			<Label text="Employee Id"></Label>
-			<Text text="{info1>Employee_id}" />
+			<Input value="{info1>Employee_id}" />
 			<Label text="Start Date" />
 			<Text text="{info1>Start_date}" />
 			<Label text="End Date" />

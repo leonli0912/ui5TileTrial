@@ -3,7 +3,7 @@
 	xmlns:cblock="ui5TileTrial.controller.controllerblocks" controllerName="ui5TileTrial.controller.ObjectOviewPage"
 	height="100%">
 	<ObjectPageLayout id="ObjectPageLayout"
-		enableLazyLoading="false" showTitleInHeaderContent="true"
+		enableLazyLoading="true" showTitleInHeaderContent="true" useIconTabBar="true"
 		showEditHeaderButton="true" editHeaderButtonPress="handleEditBtnPress"
 		useTwoColumnsForLargeScreen="true">
 		<headerTitle>
@@ -12,10 +12,12 @@
 				objectSubtitle="Senior UI Developer" isObjectIconAlwaysVisible="false"
 				isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false">
 				<actions>
-					<ObjectPageHeaderActionButton icon="sap-icon://pull-down"
-						text="show section" type="Emphasized" />
-					<ObjectPageHeaderActionButton icon="sap-icon://show"
-						text="show state" type="Emphasized" />
+					<ObjectPageHeaderActionButton id="id_edit" icon="sap-icon://edit"
+						text="Edit" importance="Medium" press="onEditPage"/>
+					<ObjectPageHeaderActionButton id="id_save" icon="sap-icon://save"
+						text="Save"  visible="false" />
+					<ObjectPageHeaderActionButton id="id_undo" icon="sap-icon://undo"
+						text="undo"  visible="false" />
 				</actions>
 				<breadCrumbsLinks>
 					<m:Link text="Home" press="handleHomePress" />
