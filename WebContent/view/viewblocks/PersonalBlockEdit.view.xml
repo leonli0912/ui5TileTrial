@@ -8,18 +8,18 @@
 		<forms:content>
 			<core:Title text="Office" />
 			<Label text="Employee Id"></Label>
-			<Text text="{info1>Employee_id}" />
+			<Input value="{info1>Employee_id}" />
 			<Label text="Start Date" />
-			<Text text="{info1>Start_date}" />
+			<Input value="{info1>Start_date}" />
 			<Label text="End Date" />
-			<Text text="{info1>End_date}" />
+			<Input value="{info1>End_date}" />
 			<Label text="Country" />
-			<Text text="{info1>Country}" />
+			<Input value="{info1>Country}" />
 			<Label text="ZIP Code/City" />
-			<Text text="{ZIPCode} {City}" />
+			<Input value="{ZIPCode} {City}" />
 			<core:Title text="Online" />
 			<Label text="Web" />
-			<Text text="{Url}" />
+			<Input value="{Url}" />
 
 		</forms:content>
 

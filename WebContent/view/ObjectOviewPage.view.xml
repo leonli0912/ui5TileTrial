@@ -53,7 +53,7 @@
 		<sections>
 			<ObjectPageSection title="Contact Info" importance="Medium">
 				<subSections>
-					<ObjectPageSubSection title="">
+					<ObjectPageSubSection id="id_personalSection" title="">
 						<cblock:PersonalBlock id="personalblock"
 							columnLayout="3">
 							<cblock:mappings>
