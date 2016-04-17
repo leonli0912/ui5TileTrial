@@ -15,9 +15,9 @@
 					<ObjectPageHeaderActionButton id="id_edit" icon="sap-icon://edit"
 						text="Edit" importance="Medium" press="onEditPage"/>
 					<ObjectPageHeaderActionButton id="id_save" icon="sap-icon://save"
-						text="Save"  visible="false" />
+						text="Save"  visible="false" press="onSavePage"/>
 					<ObjectPageHeaderActionButton id="id_undo" icon="sap-icon://undo"
-						text="undo"  visible="false" />
+						text="undo"  visible="false" press="onUndo"/>
 				</actions>
 				<breadCrumbsLinks>
 					<m:Link text="Home" press="handleHomePress" />

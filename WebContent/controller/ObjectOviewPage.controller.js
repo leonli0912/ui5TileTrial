@@ -17,32 +17,15 @@ sap.ui
 						oRouter.navTo("appHome");
 					},
 					onEditPage : function() {
-						/*
-						 * var oBlock = this.byId("personalblock"); var
-						 * oBlockMeta = oBlock.getMetadata();
-						 * oBlockMeta.setView("Collapsed","ui5TileTrial.view.viewblocks.PersonalBlock");
-						 * oBlockMeta.setView("Expanded","ui5TileTrial.view.viewblocks.PersonalBlock");
-						 * oBlock.init(); this._toggleButtonsAndView(true);
-						 */
-						var oSection = this.byId("id_personalSection");
-						var oBlockEditClass = new sap.uxap.BlockBase.extend(
-								"ui5TileTrial.controller.controllerblocks.PersonalBlockEdit",
-								{
-									metadata : {
-										views : {
-											Collapsed : {
-												viewName : "ui5TileTrial.view.viewblocks.PersonalBlockEdit",
-												type : "XML"
-											},
-											Expanded : {
-												viewName : "ui5TileTrial.view.viewblocks.PersonalBlockEdit",
-												type : "XML"
-											}
-										}
-									}
-								});
-						var oBlockEditControl = new oBlockEditClass();
-						oSection.addBlock(oBlockEditControl);
+
+						this._toggleButtonsAndView(true);
+									
+					},
+					onSavePage: function(){
+						this._toggleButtonsAndView(false);
+					},
+					onUndo:function(){
+						this._toggleButtonsAndView(false);
 					},
 					_initModel : function(oEntitySet) {
 						var that = this;
@@ -78,27 +61,30 @@ sap.ui
 						oView.byId("id_save").setVisible(bEdit);
 						oView.byId("id_undo").setVisible(bEdit);
 
-						// Set the right form type
-						// this._showFormFragment(bEdit ? "Change" : "Display");
+						// Switch views
+						this._switchViews(bEdit);
 					},
-					_showFormFragment : function(sFragmentName) {
-						var oPage = this.getView().byId("page");
-
-						oPage.removeAllContent();
-						oPage.insertContent(this
-								._getFormFragment(sFragmentName));
-					},
-					_getFormFragment : function(sFragmentName) {
-						var oFormFragment = this._formFragments[sFragmentName];
-
-						if (oFormFragment) {
-							return oFormFragment;
+					_switchViews : function(bEdit) {
+						
+						var oSection = this.byId("id_personalSection");
+						var oBlockDispaly = oSection.getBlocks()[0];
+						var oBlockEdit;
+						oBlockDispaly.setVisible(!bEdit);
+						
+						if(oSection.getBlocks()[1]){
+							oBlockEdit = oSection.getBlocks()[1];
+							oBlockEdit.setVisible(bEdit);
+						}else{
+							jQuery.sap.require("ui5TileTrial.controller.controllerblocks.PersonalBlockEdit");
+							oBlockEdit =  new ui5TileTrial.controller.controllerblocks.PersonalBlockEdit();
+							var oBlockMappingPerson = oBlockDispaly.getMappings();
+							var oSelectedView = oBlockDispaly.getSelectedView();
+							oBlockEdit.setSelectedView(oSelectedView);
+							for(i in oBlockMappingPerson){
+								oBlockEdit.addMapping(oBlockMappingPerson[i]);
+							}
+							oSection.addBlock(oBlockEdit);	
 						}
 
-						oFormFragment = sap.ui.xmlfragment(this.getView()
-								.getId(), "sap.ui.layout.sample.SimpleForm354."
-								+ sFragmentName);
-
-						return this._formFragments[sFragmentName] = oFormFragment;
-					},
+					}
 				})
