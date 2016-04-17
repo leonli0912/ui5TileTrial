@@ -53,6 +53,39 @@ sap.ui
 							that.getView().setModel(oModel, oEntitySet);
 						}
 					},
+					_updateModel:function(oEntitySet){
+						var that=this;
+						var headers = {
+								'Content-Type' : 'application/json',
+								'Accept' : 'application/json'
+							};
+						var oCont_info = {
+
+								"Employee_id" : "w0001",
+								"End_date" : endDate,
+								"Attachment" : "",
+								"Country" : "CN",
+								"Document_number" : "",
+								"Document_title" : "",
+								"Document_type" : "",
+								"Expire_date" : endDate,
+								"Publish_authority" : "",
+								"Publish_date" : "",
+								"Publish_place" : "",
+								"Start_date" : startDate
+
+							};
+						var request = {
+								requestUri : this.SERVICE_URL + oEntitySet,
+								method : 'put',
+								headers : headers,
+								data : newUer
+							};
+						OData.request(request, function(data, response) {
+
+							console.log("put "+ oEntitySet + " success");
+						});
+					},
 					_toggleButtonsAndView : function(bEdit) {
 						var oView = this.getView();
 
