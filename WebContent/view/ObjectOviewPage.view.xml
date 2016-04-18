@@ -68,7 +68,7 @@
 			<ObjectPageSection title="Empolyee Info"
 				importance="Medium">
 				<subSections>
-					<ObjectPageSubSection title="">
+					<ObjectPageSubSection id="id_employeeSection" title="">
 						<cblock:JobBlock id="jobblock" columnLayout="2" />
 					</ObjectPageSubSection>
 				</subSections>
@@ -77,7 +77,7 @@
 			<ObjectPageSection title="Employment Info"
 				importance="Medium">
 				<subSections>
-					<ObjectPageSubSection title="">
+					<ObjectPageSubSection id="id_employmentSection" title="">
 						<cblock:PayrollBlock id="payrollblock"
 							columnLayout="2">
 							<cblock:mappings>

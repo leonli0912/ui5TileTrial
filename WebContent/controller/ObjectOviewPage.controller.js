@@ -23,6 +23,7 @@ sap.ui
 					},
 					onSavePage: function(){
 						this._toggleButtonsAndView(false);
+						//this._updateModel();
 					},
 					onUndo:function(){
 						this._toggleButtonsAndView(false);
@@ -62,24 +63,32 @@ sap.ui
 						var oCont_info = {
 
 								"Employee_id" : "w0001",
-								"End_date" : endDate,
+							
 								"Attachment" : "",
 								"Country" : "CN",
 								"Document_number" : "",
 								"Document_title" : "",
 								"Document_type" : "",
-								"Expire_date" : endDate,
+								
 								"Publish_authority" : "",
 								"Publish_date" : "",
-								"Publish_place" : "",
-								"Start_date" : startDate
+								"Publish_place" : ""
+							
 
 							};
+						var oUser ={
+								 "Auth": "admin", 
+					             "Customer_id": "001", 
+					             "Employee_id": "w0001", 
+					             "Password": "pwd001", 
+					             "Status": "04", 
+					             "User_id": "u0001"
+						}
 						var request = {
-								requestUri : this.SERVICE_URL + oEntitySet,
+								requestUri : "http://120.27.144.171:8080/Odata/Cloud_Hr.svc/Users(Customer_id='001',User_id='u0001')",
 								method : 'put',
 								headers : headers,
-								data : newUer
+								data : oUser
 							};
 						OData.request(request, function(data, response) {
 
@@ -98,8 +107,10 @@ sap.ui
 						this._switchViews(bEdit);
 					},
 					_switchViews : function(bEdit) {
-						
-						var oSection = this.byId("id_personalSection");
+						this._getSection("personal",bEdit);
+						this._getSection("employee",bEdit);
+						this._getSection("employment",bEdit);
+						/*var oSection = this.byId("id_personalSection");
 						var oBlockDispaly = oSection.getBlocks()[0];
 						var oBlockEdit;
 						oBlockDispaly.setVisible(!bEdit);
@@ -117,7 +128,47 @@ sap.ui
 								oBlockEdit.addMapping(oBlockMappingPerson[i]);
 							}
 							oSection.addBlock(oBlockEdit);	
-						}
+						}*/
 
+					},
+					_getSection:function(vSection,bEdit){
+						var oSection;
+						var vEditBlockView;
+						var oBlockEdit;
+						
+						switch(vSection){
+						case "personal":
+							oSection = this.byId("id_personalSection");
+							vEditView = "ui5TileTrial.controller.controllerblocks.PersonalBlockEdit";
+							jQuery.sap.require(vEditView);
+							oBlockEdit =  new ui5TileTrial.controller.controllerblocks.PersonalBlockEdit();
+						case "employee":
+							oSection = this.byId("id_employeeSection");
+							vEditView = "ui5TileTrial.controller.controllerblocks.JobBlockEdit";
+							jQuery.sap.require(vEditView);
+							oBlockEdit =  new ui5TileTrial.controller.controllerblocks.JobBlockEdit();
+						case "employment":
+							oSection = this.byId("id_employmentSection");
+							vEditView = "ui5TileTrial.controller.controllerblocks.PayrollBlockEdit";
+							jQuery.sap.require(vEditView);
+							oBlockEdit =  new ui5TileTrial.controller.controllerblocks.PayrollBlockEdit();
+						}
+						
+						var oBlockDispaly = oSection.getBlocks()[0];
+						oBlockDispaly.setVisible(!bEdit);
+						
+						if(oSection.getBlocks()[1]){
+							oBlockEdit = oSection.getBlocks()[1];
+							oBlockEdit.setVisible(bEdit);
+						}else{
+							var oBlockMappingPerson = oBlockDispaly.getMappings();
+							var oSelectedView = oBlockDispaly.getSelectedView();
+							oBlockEdit.setSelectedView(oSelectedView);
+							for(i in oBlockMappingPerson){
+								oBlockEdit.addMapping(oBlockMappingPerson[i]);
+							}
+							oSection.addBlock(oBlockEdit);	
+						}
+						
 					}
 				})
