@@ -148,11 +148,13 @@ sap.ui
 							vEditView = "ui5TileTrial.controller.controllerblocks.JobBlockEdit";
 							jQuery.sap.require(vEditView);
 							oBlockEdit =  new ui5TileTrial.controller.controllerblocks.JobBlockEdit();
+							break;
 						case "employment":
 							oSection = this.byId("id_employmentSection");
 							vEditView = "ui5TileTrial.controller.controllerblocks.PayrollBlockEdit";
 							jQuery.sap.require(vEditView);
 							oBlockEdit =  new ui5TileTrial.controller.controllerblocks.PayrollBlockEdit();
+							break;
 						}
 						
 						var oBlockDispaly = oSection.getBlocks()[0];
