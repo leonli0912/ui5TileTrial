@@ -21,10 +21,7 @@
 		</masterPages>
 		<detailPages>
 			<Page id="stockDetail" title="Stock Detail" class="sapUiStdPage">
-				<content>
-					<Label text="Detail page 1" />
-					<Button text="Go to Detail page2" press="onPressNavToDetail" />
-				</content>
+				
 			</Page>
 		</detailPages>
 	</SplitApp>

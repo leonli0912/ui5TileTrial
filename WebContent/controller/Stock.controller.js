@@ -6,6 +6,7 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 	var CController = Controller.extend("ui5TileTrial.controller.Stock", {
 		SERVICE_URL : "http://120.27.144.171:8080/Odata/Cloud_Hr.svc/",
 		onInit : function() {
+			this._createIframe();
 			var stockModel = new sap.ui.model.json.JSONModel();
 			// stockModel.loadData("https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/test/test.xsjs");
 			// http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp?symbol=AAPL&callback=?
@@ -194,6 +195,16 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 			 * that.getView().setModel(oModel); var oTable = that
 			 * .byId("id_stockList"); oTable.setModel(oModel); };
 			 */
+		},
+		_createIframe:function(){
+			var oDetailedPage = this.byId("stockDetail");
+			var oObjectView = sap.ui.view({
+			
+				viewName:"ui5TileTrial.view.ObjectOviewPage",
+				type:sap.ui.core.mvc.ViewType.XML
+			});
+			//oObjectView.placeAt("content");
+			oDetailedPage.addContent(oObjectView);
 		}
 
 	});
