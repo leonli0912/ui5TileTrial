@@ -142,6 +142,7 @@ sap.ui
 							vEditView = "ui5TileTrial.controller.controllerblocks.PersonalBlockEdit";
 							jQuery.sap.require(vEditView);
 							oBlockEdit =  new ui5TileTrial.controller.controllerblocks.PersonalBlockEdit();
+							break;
 						case "employee":
 							oSection = this.byId("id_employeeSection");
 							vEditView = "ui5TileTrial.controller.controllerblocks.JobBlockEdit";
