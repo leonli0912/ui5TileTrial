@@ -7,31 +7,19 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 		SERVICE_URL : "http://120.27.144.171:8080/Odata/Cloud_Hr.svc/",
 		onInit : function() {
 			this._createIframe();
-			var stockModel = new sap.ui.model.json.JSONModel();
-			// stockModel.loadData("https://s12hanaxs.hanatrial.ondemand.com/i074178trial/stock/test/test.xsjs");
-			// http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp?symbol=AAPL&callback=?
-			// stockModel.loadData("model/stock.json");
 			var that = this;
+			
 			$.ajax({
 				type : "GET",
 				dataType : 'json',
 				url : this.SERVICE_URL + "Customers?$format=json",
-				// jsonpCallback:
-				// 'processJson',
 				contentType : "application/json",
-				// dataType:
-				// 'jsonp',
 				success : function(json, that) {
 
 					console.log("success...");
-					var stockModel = new sap.ui.model.json.JSONModel();
-					stockModel.setData(json.d.results);
-					_setTableModel(stockModel);
-					/*
-					 * that.getView().setModel(stockModel); var stockModel =
-					 * that.getView().getModel(); var oTable =
-					 * that.byId("id_stockList"); oTable.setModel(stockModel);
-					 */
+					var masterModel = new sap.ui.model.json.JSONModel();
+					masterModel.setData(json.d.results);
+					_setTableModel(masterModel);
 				},
 				error : function(e) {
 					console.log(e.message);
@@ -48,6 +36,11 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("appHome");
+		},
+		onPressToDetail:function(oEvt){
+			var vEmployeeId = oEvt.getTitle();
+			var oSplitPage = this.byId("SplitStock");
+			//oSplitPage.toDetail(this.createId(sToPageId));
 		},
 		onPressAdd : function(oEvt) {
 			var that = this;

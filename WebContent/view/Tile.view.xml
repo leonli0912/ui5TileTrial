@@ -37,13 +37,13 @@
 
 					</StandardTile>-->
 					<StandardTile xmlns="sap.m" id="ida2" removable="true"
-						title="My Stock" info="Create/Edit/Review the project" icon="sap-icon://work-history"
+						title="My Employees" info="Create/Edit/Review the project" icon="sap-icon://work-history"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
 						iconDensityAware="true" press="onPressStock">
 
 					</StandardTile> 
 					<StandardTile xmlns="sap.m" id="ida" removable="true"
-						title="Employee Data" info="Review/submit a Change" icon="sap-icon://request"
+						title="Own Data" info="Review/submit a Change" icon="sap-icon://request"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
 						iconDensityAware="true" press="onPressPersonal">
 					</StandardTile>
