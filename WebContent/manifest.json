@@ -45,7 +45,12 @@
                 {
                     "pattern": "stock", 
                     "name": "stock", 
-                    "target": ["stockobject", "stockmaster"]
+                    "target": "stock"
+                },
+                {
+                    "pattern": "SplitApp", 
+                    "name": "splitapp", 
+                    "target": "splitapp"
                 }
             ], 
             "targets": {
@@ -62,15 +67,12 @@
                 "person": {
                     "viewName": "ObjectOviewPage"
                 }, 
-					stockmaster: {
-						viewName: "S2_PurchaseOrders",
-						viewLevel: 1,
-						controlAggregation: "masterPages"
-					},
-					stockobject: {
-						viewName: "S3_PurchaseOrderDetails",
-						viewLevel: 2
-					},
+                "stock": {
+                    "viewName": "Stock"
+                },
+                "splitapp": {
+                    "viewName": "SplitApp"
+                }
             }
         }
     }

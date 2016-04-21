@@ -42,10 +42,17 @@
 						iconDensityAware="true" press="onPressStock">
 
 					</StandardTile> 
+					
 					<StandardTile xmlns="sap.m" id="ida" removable="true"
 						title="Own Data" info="Review/submit a Change" icon="sap-icon://request"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
 						iconDensityAware="true" press="onPressPersonal">
+					</StandardTile>
+					
+					<StandardTile xmlns="sap.m" id="iEmpList" removable="true"
+						title="Emp List" info="Review/submit a Change" icon="sap-icon://request"
+						activeIcon="" number="" numberUnit="" infoState="None" type="None"
+						iconDensityAware="true" press="onPressSplitList">
 					</StandardTile>
 
 

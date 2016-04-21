@@ -3,10 +3,10 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 		jQuery, MessageToast, Fragment, Controller) {
 	"use strict";
 	
-	var CController = Controller.extend("ui5TileTrial.controller.Stock", {
+	var CController = Controller.extend("ui5TileTrial.controller.EmployeeList", {
 		SERVICE_URL : "http://120.27.144.171:8080/Odata/Cloud_Hr.svc/",
 		onInit : function() {
-			this._createIframe();
+			//this._createIframe();
 			//this.getRouter().getRoute("PurchaseOrderDetails").attachPatternMatched(this.onPOMatched, this);
 			var that = this;
 			
@@ -28,7 +28,7 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 			});
 			var _setTableModel = function(oModel) {
 				that.getView().setModel(oModel);
-				var oTable = that.byId("id_stockList");
+				var oTable = that.byId("id_EmployeeList");
 				oTable.setModel(oModel);
 			};
 
