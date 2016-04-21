@@ -45,7 +45,7 @@
                 {
                     "pattern": "stock", 
                     "name": "stock", 
-                    "target": "stock"
+                    "target": ["stockobject", "stockmaster"]
                 }
             ], 
             "targets": {
@@ -62,9 +62,15 @@
                 "person": {
                     "viewName": "ObjectOviewPage"
                 }, 
-                "stock": {
-                    "viewName": "Stock"
-                }
+					stockmaster: {
+						viewName: "S2_PurchaseOrders",
+						viewLevel: 1,
+						controlAggregation: "masterPages"
+					},
+					stockobject: {
+						viewName: "S3_PurchaseOrderDetails",
+						viewLevel: 2
+					},
             }
         }
     }
