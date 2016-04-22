@@ -51,7 +51,12 @@
                     "pattern": "SplitApp", 
                     "name": "splitapp", 
                     "target": "splitapp"
-                }
+                },
+                {
+					"pattern": "Employee/{EmployeeId}",
+					"name": "employee",
+					"target": ["master", "detail"]
+				}
             ], 
             "targets": {
                 "home": {
@@ -72,6 +77,12 @@
                 },
                 "splitapp": {
                     "viewName": "SplitApp"
+                },
+                "detail":{
+                	"viewName":"ObjectOviewPage"
+                },
+                "master":{
+                	"viewName":"EmployeeList"
                 }
             }
         }

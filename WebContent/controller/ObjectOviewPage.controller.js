@@ -9,6 +9,8 @@ sap.ui
 						this._initModel("Cont_Infos");
 						this._initModel("Employee_Infos");
 						this._initModel("Employment_Infos");
+						var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+						oRouter.getRoute("employee").attachPatternMatched(this._onObjectMatched, this);
 
 					},
 					handleHomePress : function(oEvt) {
@@ -27,6 +29,15 @@ sap.ui
 					},
 					onUndo:function(){
 						this._toggleButtonsAndView(false);
+					},
+					_onObjectMatched:function(oEvent){
+						var sObjectId =  oEvent.getParameter("arguments").EmployeeId;
+						this.getModel().metadataLoaded().then( function() {
+							var sObjectPath = this.getModel().createKey("Employee_id", {
+								ObjectID :  sObjectId
+							});
+							this._bindView("/" + sObjectPath);
+						}.bind(this));	
 					},
 					_initModel : function(oEntitySet) {
 						var that = this;
