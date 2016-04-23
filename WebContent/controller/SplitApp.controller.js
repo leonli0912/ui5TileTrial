@@ -24,20 +24,21 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 			oDetailedPage.addContent(oObjectView);
 
 			var oMasterPage = new sap.m.Page("idMasterPage",{
-				id:"idEmployeeList",
+				
 				title:"Employees",
 				icon:"sap-icon://action",
 				showNavButton:true, 
-				navButtonPress:"onPressHome",
-				showHeader:false
+				navButtonPress:this.onPressHome,
+				showHeader:true
 			});
 			oMasterPage.addContent(oEmpListView);
 			oSplitApp.addMasterPage(oMasterPage);
 			oSplitApp.addDetailPage(oDetailedPage);
 		},
-		onPressHome : function() {
-
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		onPressHome : function(oEvt) {
+			var oSource = oEvt.getSource();
+			var oView = oSource.getParent().getParent().getParent();
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(oView);
 			oRouter.navTo("appHome");
 		}
 

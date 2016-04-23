@@ -41,8 +41,11 @@ sap.ui
 					},
 					_initModel : function(oEntitySet) {
 						var that = this;
-						OData.read({
-							requestUri : this.SERVICE_URL + oEntitySet,
+						var employee_id="w0001";
+						var filter = "?$filter=Employee_id eq '"+ employee_id +"'";
+/*						OData.read({
+							//url:http://120.27.144.171:8080/Odata/Cloud_Hr.svc/Cont_Infos?$filter=Employee_id%20eq%20%27w0001%27&$format=json
+							requestUri : this.SERVICE_URL + oEntitySet + filter,
 							headers : {
 								Accept : "application/json"
 							}
@@ -50,6 +53,22 @@ sap.ui
 
 							var oJsonModel = new sap.ui.model.json.JSONModel();
 							oJsonModel.setData(data);
+							_setTableModel(oJsonModel, that);
+						}, function(err) {
+							alert("Error occurred " + err.message);
+						});*/
+						
+						
+						OData.read({
+							//url:http://120.27.144.171:8080/Odata/Cloud_Hr.svc/Cont_Infos?$filter=Employee_id%20eq%20%27w0001%27&$format=json
+							requestUri : this.SERVICE_URL + oEntitySet + filter,
+							headers : {
+								Accept : "application/json"
+							}
+						}, function(data, response) {
+
+							var oJsonModel = new sap.ui.model.json.JSONModel();
+							oJsonModel.setData(data.results[0]);
 							_setTableModel(oJsonModel, that);
 						}, function(err) {
 							alert("Error occurred " + err.message);

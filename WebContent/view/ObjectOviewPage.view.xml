@@ -58,7 +58,7 @@
 							columnLayout="3">
 							<cblock:mappings>
 								<ModelMapping externalModelName="Cont_Infos"
-									internalModelName="info1" externalPath="/results/0" />
+									internalModelName="info1" externalPath="/" />
 							</cblock:mappings>
 						</cblock:PersonalBlock>
 					</ObjectPageSubSection>
@@ -82,7 +82,7 @@
 							columnLayout="2">
 							<cblock:mappings>
 								<ModelMapping externalModelName="Employment_Infos"
-									internalModelName="info1" externalPath="/results/0" />
+									internalModelName="info1" externalPath="/" />
 							</cblock:mappings>
 						</cblock:PayrollBlock>
 					</ObjectPageSubSection>
