@@ -6,11 +6,11 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 	var CController = Controller.extend("ui5TileTrial.controller.Stock", {
 		SERVICE_URL : "http://120.27.144.171:8080/Odata/Cloud_Hr.svc/",
 		onInit : function() {
-			this._createIframe();
+			//this._createIframe();
 			//this.getRouter().getRoute("PurchaseOrderDetails").attachPatternMatched(this.onPOMatched, this);
 			var that = this;
 			
-			$.ajax({
+/*			$.ajax({
 				type : "GET",
 				dataType : 'json',
 				url : this.SERVICE_URL + "Customers?$format=json",
@@ -25,12 +25,16 @@ sap.ui.define([ 'jquery.sap.global', 'sap/m/MessageToast',
 				error : function(e) {
 					console.log(e.message);
 				}
-			});
+			});*/
+			var masterModel = new sap.ui.model.json.JSONModel();
+			masterModel.loadData("./model/people.json");
+			
 			var _setTableModel = function(oModel) {
 				that.getView().setModel(oModel);
 				var oTable = that.byId("id_stockList");
 				oTable.setModel(oModel);
 			};
+			_setTableModel(masterModel);
 
 		},
 		onPressHome : function() {

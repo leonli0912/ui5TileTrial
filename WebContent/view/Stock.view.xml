@@ -11,9 +11,14 @@
 				</headerContent>
 				<content>
 					<List id="id_stockList" items="{/}">
-						<StandardListItem title="{Customer_id}" description="{Customer_name}"
-							type="Navigation" icon="{ProductPicUrl}" iconDensityAware="false"
-							iconInset="false" press="onPressToDetail" />
+						<StandardListItem 
+						title="{Customer_id}" 
+						description="{Customer_name}"
+						type="Navigation" 
+						icon="{ProductPicUrl}" 
+						iconDensityAware="false"
+						iconInset="false" 
+						press="onPressToDetail" />
 					</List>
 				</content>
 

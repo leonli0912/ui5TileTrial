@@ -40,7 +40,6 @@
 						title="My Employees" info="Create/Edit/Review the project" icon="sap-icon://work-history"
 						activeIcon="" number="" numberUnit="" infoState="None" type="None"
 						iconDensityAware="true" press="onPressStock">
-
 					</StandardTile> 
 					
 					<StandardTile xmlns="sap.m" id="ida" removable="true"
@@ -55,12 +54,7 @@
 						iconDensityAware="true" press="onPressSplitList">
 					</StandardTile>
 
-
-
-
-
 				</tiles>
-
 			</TileContainer>
 
 		</content>

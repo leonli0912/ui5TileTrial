@@ -1,6 +1,10 @@
 [
   {
     "_id": "56fd5e400c9e8def28180df3",
+    				'Customer_id' : '005',
+				'Customer_name' : 'employee5',
+				'Customer_status' : 'Active',
+				'Customer_type' : 'FTE'
     "index": 0,
     "isActive": true,
     "picture": "img/people/u37.png",
@@ -17,6 +21,10 @@
   },
   {
     "_id": "56fd5e40d8e33f8a16338c12",
+    				'Customer_id' : '006',
+				'Customer_name' : 'employee6',
+				'Customer_status' : 'Deactive',
+				'Customer_type' : 'FTE'
     "index": 1,
     "isActive": true,
     "picture": "img/people/u39.jpg",
@@ -33,6 +41,10 @@
   },
   {
     "_id": "56fd5e401a8d2a819489ee9c",
+    				'Customer_id' : '007',
+				'Customer_name' : 'employee7',
+				'Customer_status' : 'Active',
+				'Customer_type' : 'FTE'
     "index": 2,
     "isActive": false,
     "picture": "img/people/u41.jpg",
